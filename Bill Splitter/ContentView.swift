@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var editMode: EditMode = EditMode.inactive
-    
+    @State var Placeholder: String = "Placed"
+  
     struct Person: Identifiable {
         let id = UUID()
         let name: String
@@ -27,17 +28,26 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(test) { person in
+                  HStack {
+                    Button(action: {}, label: {
+                      Label("", systemImage: "minus.circle.fill").accentColor(.red)
+                    })
                     Text(person.name)
+                  }
                 }
                 .onDelete(perform: onDelete)
-                
+                HStack {
+                  Button(action: {}, label: {
+                    Label("", systemImage: "plus.circle.fill").accentColor(.green)
+                  })
+                  TextField("LocalizedStringKey", text: $Placeholder)
+                }
+              
 //                Button(action: {() -> Void in return}) {
 //                    Label("Thing", systemImage: "plus.circle.fill").accentColor(.green)
 //                }
             }
-            .navigationBarTitle("Split a Bill")
-            .navigationBarItems(leading: EditButton(), trailing: addButton)
-            .environment(\.editMode, $editMode)
+            .navigationBarTitle("Split a Bill")//"Split a Bill")
         }
     }
     
