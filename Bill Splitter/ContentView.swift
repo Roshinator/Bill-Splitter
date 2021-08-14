@@ -29,15 +29,20 @@ struct ContentView: View {
             List {
                 ForEach(test) { person in
                   HStack {
-                    Button(action: {}, label: {
-                      Label("", systemImage: "minus.circle.fill").accentColor(.red)
-                    })
+                    
                     Text(person.name)
+                    
+                    Spacer()
+  
+                    Image(systemName: "arrow.left")
+                      .foregroundColor(.red)
                   }
                 }
                 .onDelete(perform: onDelete)
                 HStack {
-                  Button(action: {}, label: {
+                  Button(action: {
+                    test.append(Person(name: Placeholder))
+                  }, label: {
                     Label("", systemImage: "plus.circle.fill").accentColor(.green)
                   })
                   TextField("LocalizedStringKey", text: $Placeholder)
