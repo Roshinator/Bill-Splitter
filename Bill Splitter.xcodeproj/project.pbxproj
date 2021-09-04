@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9893EFEB26E41703000AF9DB /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893EFEA26E41703000AF9DB /* ItemView.swift */; };
+		9893EFED26E42072000AF9DB /* CostPersonInputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893EFEC26E42072000AF9DB /* CostPersonInputForm.swift */; };
 		98A9CD6E26C426AA00AFA475 /* Bill_SplitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9CD6D26C426AA00AFA475 /* Bill_SplitterApp.swift */; };
 		98A9CD7026C426AA00AFA475 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9CD6F26C426AA00AFA475 /* ContentView.swift */; };
 		98A9CD7226C426AB00AFA475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A9CD7126C426AB00AFA475 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9893EFEA26E41703000AF9DB /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		9893EFEC26E42072000AF9DB /* CostPersonInputForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostPersonInputForm.swift; sourceTree = "<group>"; };
 		98A9CD6A26C426AA00AFA475 /* Bill Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bill Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A9CD6D26C426AA00AFA475 /* Bill_SplitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill_SplitterApp.swift; sourceTree = "<group>"; };
 		98A9CD6F26C426AA00AFA475 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			children = (
 				98A9CD6D26C426AA00AFA475 /* Bill_SplitterApp.swift */,
 				98A9CD6F26C426AA00AFA475 /* ContentView.swift */,
+				9893EFEA26E41703000AF9DB /* ItemView.swift */,
+				9893EFEC26E42072000AF9DB /* CostPersonInputForm.swift */,
 				98A9CD7126C426AB00AFA475 /* Assets.xcassets */,
 				98A9CD7626C426AB00AFA475 /* Info.plist */,
 				98A9CD7326C426AB00AFA475 /* Preview Content */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9893EFED26E42072000AF9DB /* CostPersonInputForm.swift in Sources */,
 				98A9CD7026C426AA00AFA475 /* ContentView.swift in Sources */,
+				9893EFEB26E41703000AF9DB /* ItemView.swift in Sources */,
 				98A9CD6E26C426AA00AFA475 /* Bill_SplitterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

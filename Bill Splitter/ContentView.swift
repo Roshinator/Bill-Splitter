@@ -26,42 +26,33 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(test) { person in
-                  HStack {
-                    
-                    Text(person.name)
-                    
-                    Spacer()
-  
-                    Image(systemName: "arrow.left")
-                      .foregroundColor(.red)
-                  }
+            VStack {
+                List {
+                    ForEach(test) { person in
+                      HStack {
+                        Text(person.name)
+                        
+                      }
+                    }
+                    .onDelete(perform: onDelete)
                 }
-                .onDelete(perform: onDelete)
-                HStack {
-                  Button(action: {
-                    test.append(Person(name: Placeholder))
-                  }, label: {
-                    Label("", systemImage: "plus.circle.fill").accentColor(.green)
-                  })
-                  TextField("LocalizedStringKey", text: $Placeholder)
+                NavigationLink (destination: ItemView()) {
+                    Text("Next")
+                        .foregroundColor(Color.white)
+                        .fontWeight(.light)
+                        .frame(width: 200, height: 50)
+                        .background(Color.blue)
+                        .cornerRadius(15)
+                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 }
-              
-//                Button(action: {() -> Void in return}) {
-//                    Label("Thing", systemImage: "plus.circle.fill").accentColor(.green)
-//                }
+                
             }
             .navigationBarTitle("Split a Bill")//"Split a Bill")
+            .navigationBarItems(trailing: EditButton())
+            .environment(\.editMode, $editMode)
+        
         }
-    }
-    
-    private var addButton: some View {
-        return AnyView(
-            Button(action: onAdd) {
-                    Image(systemName: "plus")
-                
-            })
+        
     }
     
     private func onDelete(offsets: IndexSet) {
